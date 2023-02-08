@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>SweetBlender's Website</title>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/0169bbb5ae.js" crossorigin="anonymous"></script>
+
+        <meta content="SweetBlender" property="og:title" />
+        <meta content="SweetBlender website. Check out the latest ned" property="og:description" />
+        <meta content="https://zylly.github.io/first-website/index.html" property="og:url" />
+        <meta content="#f87cff" data-react-helmet="true" name="theme-color" />
+
+        <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    </head>
+
+    <body>
+
+        <main>
+
+            <article>
+
+                <!-- <img class = "banner-lol" src="images/logo.png"> -->
+
+                <h2>Slot Machine</h2>
+
+                <img class = "banner-thingy" src="images/banner.png">
+
+                <p>Press the button bellow to generate your numbers:</p>
+
+                <py-script>
+                  import random
+                  import colorama
+
+                  from colorama import Fore
+                  colorama.init()
+                  
+                  num1 = random.randint(2, 8)
+                  num2 = random.randint(2, 8)
+                  num3 = random.randint(2, 8)
+                  
+                  print("|", num1 - 1, "|", num2 - 1, "|", num3 - 1, "|")
+                  print("-------------", Fore.CYAN + "")
+                  print("|", num1, "|", num2, "|", num3, "|" + colorama.Style.RESET_ALL)
+                  print("-------------")
+                  print("|", num1 + 1, "|", num2 + 1, "|", num3 + 1, "|")
+                </py-script>
+
+                <!-- <button class="Tools-Button" href = "https://zylly.github.io/first-website/ned.html">Ned Power</button> -->
+
+            </article>
+
+    </body>
+</html>
